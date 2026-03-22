@@ -24,7 +24,7 @@ const AppWrapper = () => {
   React.useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token || token === "undefined") {
-      window.location.href = "http://localhost:3000/login";
+      window.location.href = "https://zerodha-clone-mauve-two.vercel.app//login";
     }
   }, []);
 

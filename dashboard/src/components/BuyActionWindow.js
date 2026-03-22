@@ -15,7 +15,7 @@ const handleOrderClick = async () => {
   try {
     console.log("ORDER:", uid, stockQuantity, stockPrice, mode);
 
-    const res = await axios.post("http://localhost:3002/newOrder", {
+    const res = await axios.post("https://zerodha-clone-1-8nnk.onrender.com/newOrder", {
       name: uid,
       qty: Number(stockQuantity),
       price: Number(stockPrice),

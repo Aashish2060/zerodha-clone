@@ -15,7 +15,7 @@ const Apps = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = "https://zerodha-clone-mauve-two.vercel.app//login";
   };
 
   return (
@@ -338,7 +338,7 @@ const Apps = () => {
           <div className="btn-row">
             <button
               className="btn-home"
-              onClick={() => window.location.href = "http://localhost:3000"}
+              onClick={() => window.location.href = "https://zerodha-clone-mauve-two.vercel.app/"}
             >
               🏠 Go to Home
             </button>
