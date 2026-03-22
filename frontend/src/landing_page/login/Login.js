@@ -50,7 +50,7 @@ const Login = () => {
   // localStorage on port 3000 is invisible to port 3001
   const redirectToDashboard = (token, user) => {
     const name = encodeURIComponent(user?.name || "");
-    window.location.href = `zerodha-clone-c64p.vercel.app?token=${token}&name=${name}`;
+window.location.href = `https://zerodha-clone-c64p.vercel.app?token=${token}&name=${name}`;
   };
 
   const handleGoogleSuccess = async (credentialResponse) => {
