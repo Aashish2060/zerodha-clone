@@ -18,7 +18,14 @@ const MONGO_URL = process.env.MONGO_URL;
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://zerodha-clone-mauve-two.vercel.app',
+    'http://localhost:3000',
+    'http://localhost:3001'
+  ],
+  credentials: true
+}));
 app.use(bodyParser.json());
 app.use(express.json());
 
