@@ -20,7 +20,8 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: [
-    'https://zerodha-clone-mauve-two.vercel.app',
+    'https://zerodha-clone-mauve-two.vercel.app',      // main frontend
+    'https://zerodha-clone-c64p.vercel.app',           // dashboard
     'http://localhost:3000',
     'http://localhost:3001'
   ],
