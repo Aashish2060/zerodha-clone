@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Apps from "./Apps";
 import Funds from "./Funds";
 import Holdings from "./Holdings";
-
 import Orders from "./Orders";
 import Positions from "./Positions";
 import Summary from "./Summary";
@@ -12,40 +11,11 @@ import WatchList from "./WatchList";
 import { GeneralContextProvider } from "./GeneralContext";
 
 const Dashboard = () => {
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-
-    const token = params.get("token");
-    const name = params.get("name");
-
-    console.log("TOKEN:", token);
-    console.log("NAME:", name);
-
-    // ✅ store token
-    if (token) {
-      localStorage.setItem("token", token);
-    }
-
-    // ✅ store user name
-    if (name && name !== "undefined") {
-      localStorage.setItem("user", JSON.stringify({ name }));
-    }
-
-    // ✅ clean URL AFTER storing (safe delay)
-    if (token || name) {
-      setTimeout(() => {
-        window.history.replaceState({}, document.title, "/");
-      }, 500);
-    }
-
-  }, []);
-
+  // ✅ No token logic here — index.js handles it before React mounts
   return (
     <div className="dashboard-container">
       <GeneralContextProvider>
         <WatchList />
-      
         <div className="content">
           <Routes>
             <Route path="/" element={<Summary />} />
