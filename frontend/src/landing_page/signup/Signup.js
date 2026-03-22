@@ -17,7 +17,7 @@ const Signup = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_URL = "http://localhost:3002/api/auth";
+  const API_URL = "https://zerodha-clone-1-8nnk.onrender.com/api/auth";
 
   // ✅ Load Google Identity Services script and render button
   useEffect(() => {

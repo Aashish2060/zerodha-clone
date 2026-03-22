@@ -11,7 +11,7 @@ const Login = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_URL = "http://localhost:3002/api/auth";
+  const API_URL = "https://zerodha-clone-1-8nnk.onrender.com/api/auth";
 
   useEffect(() => {
     const loadGoogleScript = () => {
@@ -50,7 +50,7 @@ const Login = () => {
   // localStorage on port 3000 is invisible to port 3001
   const redirectToDashboard = (token, user) => {
     const name = encodeURIComponent(user?.name || "");
-    window.location.href = `http://localhost:3001?token=${token}&name=${name}`;
+    window.location.href = `zerodha-clone-c64p.vercel.app?token=${token}&name=${name}`;
   };
 
   const handleGoogleSuccess = async (credentialResponse) => {
